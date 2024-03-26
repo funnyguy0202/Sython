@@ -1,11 +1,10 @@
-writefile("Sython_AuthData.json", HttpService:JSONEncode(_G["Sython_Key"]))
 local HttpService                   = game:GetService("HttpService");
 local Players                       = game:GetService("Players");
 local Local_Player                  = Players.LocalPlayer;
 
-local script_key
+writefile("Sython_AuthData.json", HttpService:JSONEncode(_G["Sython_Key"]));
 if (not getactors) then Local_Player:Kick("Error Your Exector Isnt Supported On Sython.Space At This Time [Missing Vital Functions]"); end;
-local Main_Actor = getactors()[1]
+local Main_Actor = getactors()[1];
 if Main_Actor then 
     run_on_actor(Main_Actor, [[
         script_key=game:GetService("HttpService"):JSONDecode(readfile("Sython_AuthData.json"))
