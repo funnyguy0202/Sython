@@ -1,4 +1,5 @@
 writefile("Sython_AuthData.json", HttpService:JSONEncode(_G["Sython_Key"]))
+local HttpService                   = game:GetService("HttpService");
 local Players                       = game:GetService("Players");
 local Local_Player                  = Players.LocalPlayer;
 
